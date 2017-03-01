@@ -1,0 +1,31 @@
+rating {
+  position: absolute;
+  top: calc(50% - 10.5px);
+  display: inline-block;
+  width: 105px;
+
+  .rating-container {
+    position: absolute;
+    width: 100%;
+
+    .rates {
+      overflow: hidden;
+
+      ion-icon {
+        color: black;
+      }
+    }
+  }
+
+  .rating-container:first-child {
+    z-index: 10;
+    .rates {
+      ion-icon {
+        color: goldenrod;
+      }
+    }
+  }
+  & + * {
+    margin-left: 125px;
+  }
+}
