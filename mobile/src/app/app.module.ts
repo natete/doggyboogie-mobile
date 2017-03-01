@@ -1,17 +1,24 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { AboutPage } from '../pages/about/about';
+import { FavoritesPage } from '../pages/favorites/favorites';
 import { ContactPage } from '../pages/contact/contact';
-import { HomePage } from '../pages/home/home';
+import { SearchPage } from '../pages/search/search';
 import { TabsPage } from '../pages/tabs/tabs';
+import { MessagesPage } from '../pages/messages/messages';
+import { DetailPage } from '../pages/detail/detail';
+import { DogService } from '../providers/dog.service';
+import { RatingComponent } from '../components/rating/rating';
 
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
+    FavoritesPage,
     ContactPage,
-    HomePage,
+    DetailPage,
+    SearchPage,
+    MessagesPage,
+    RatingComponent,
     TabsPage
   ],
   imports: [
@@ -20,12 +27,18 @@ import { TabsPage } from '../pages/tabs/tabs';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
+    FavoritesPage,
     ContactPage,
-    HomePage,
+    DetailPage,
+    SearchPage,
+    MessagesPage,
+    RatingComponent,
     TabsPage
   ],
-  providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }]
+  providers: [
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    DogService
+  ]
 })
 export class AppModule {
 }

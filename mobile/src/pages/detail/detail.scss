@@ -1,0 +1,45 @@
+page-detail {
+  ion-card.dog-card {
+    margin: 0;
+    width: 100%;
+
+    ion-item {
+      border-bottom: 0.55px solid $list-border-color;
+      //paddinYg: 0;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &.info {
+        span:first-child {
+          margin-right: 25px;
+        }
+
+        ion-icon {
+          margin: 8px 16px 8px 0;
+          font-size: 2.8rem;
+        }
+      }
+
+      &.ratings {
+        span {
+          position: absolute;
+          top: 0;
+          margin-top: 0;
+          margin-bottom: 0;
+          line-height: 45px;
+        }
+      }
+
+      ion-icon {
+        color: $list-border-color;
+
+        &.active {
+          color: goldenrod;
+        }
+      }
+    }
+
+  }
+}
